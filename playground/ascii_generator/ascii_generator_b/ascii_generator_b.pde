@@ -1,10 +1,3 @@
-// Note for next iteration:
-// Color edit image and take in 2 photos,
-// rasterize and make one quite a bit saturated, other dull
-// base ASCII on one and highlights on other
-// pull from opposite every once in a while (switch, dont have ascii and highlight
-// be same color)
-
 // Ascii symbols arranged dark to light
 PImage img;
 PFont font;
