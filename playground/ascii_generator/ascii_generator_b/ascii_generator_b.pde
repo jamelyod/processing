@@ -8,6 +8,7 @@
 // Ascii symbols arranged dark to light
 PImage img;
 PFont font;
+PFont font2;
 String button_pressed = "none";
 String[] ascii_symbols = {
 "$", "@", "B", "%", "8", "&", "W", "M", "#", "*", "o", "a", "h", "k", "b", "d", 
@@ -25,9 +26,17 @@ void setup(){
   colorMode(HSB);
   background(0);
   font = createFont("Futura-Bold", pixel_y);
+  //font2 = createFont("Trattatello", pixel_y*1.2);
+  //font2 = createFont("NotoSansJP-Thin", pixel_y*1.1);
+  font2 = createFont("ArialNarrow-Italic", pixel_y);
+  print(PFont.list());
 
   // Process image
-  img = loadImage("../photos/chrome_icon.png");
+  //img = loadImage("../photos/court.png");
+  //img.resize(600, 400);
+  //img = loadImage("../photos/court_bg.jpeg");
+  //img.resize(600, 600);
+  img = loadImage("../photos/pantheon.png");
   img.resize(600, 600);
   //img = loadImage("../photos/pottery.png");
   //img.resize(500, 600);
@@ -45,6 +54,9 @@ void draw(){
   background(0);
   textFont(font); 
   noStroke();
+  // Uncomment to translate the image down
+  // I specifically used this for the pantheon image/
+  // translate(0, 200);
   
   if (button_pressed == "none") scale(1);
   else if (button_pressed == "o") scale(2);
@@ -55,7 +67,7 @@ void draw(){
     for (int x = 0; x < (600/pixel_x); x++){
       int this_pixel = ((600/pixel_x)*y)+x; //((# of x) * y) + x
       color this_color = pixel_color[this_pixel];
-      //Inverting colors a bit
+      // Inverting colors a bit
       color inverted_color = color(blue(this_color), red(this_color), green(this_color)); 
       color inter_color = lerpColor(inverted_color, this_color>>2, .5);
       if (this_color != 0) {
@@ -71,6 +83,12 @@ void draw(){
       }
     }
   }
+  
+  // Un-comment and move around if you want to add text
+  //fill(240);
+  //textFont(font2); 
+  //text("\"ILLE HIC EST RAFFAEL TIMUIT QUO SOSPITE", 30, 550);
+  //text("VINCI RERUM MAGRA PARENS ET MORIENTE MORI\"", 30, 560);
 }
 
 void keyPressed(){
