@@ -25,12 +25,12 @@ void setup(){
   print(PFont.list());
 
   // Process image
-  //img = loadImage("../photos/court.png");
-  //img.resize(600, 400);
+  img = loadImage("../photos/court.png");
+  img.resize(600, 400);
   //img = loadImage("../photos/court_bg.jpeg");
   //img.resize(600, 600);
-  img = loadImage("../photos/pantheon.png");
-  img.resize(600, 600);
+  //img = loadImage("../photos/pantheon.png");
+  //img.resize(600, 600);
   //img = loadImage("../photos/pottery.png");
   //img.resize(500, 600);
   for (int y = 0; y < (600/pixel_y); y++){ //0-60 rows
