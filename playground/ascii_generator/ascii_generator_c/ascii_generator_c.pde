@@ -10,15 +10,17 @@ String[] ascii_symbols = {
 int symbol_no = ascii_symbols.length;
 int pixel_x = 6;
 int pixel_y = 10;
-int pixel_no = (600*300)/(pixel_x*pixel_y); //6000 - 60 rows, 100 per row
+int pixel_no = (1200*600)/(pixel_x*pixel_y);
 int[] pixel_color = new int[pixel_no];
 int[] pixel_symbol = new int[pixel_no];
 
 void setup(){
-  size(600, 300);
+  size(1200, 600);
   colorMode(HSB);
   background(0);
-  mov = new Movie(this, "pieta.mov");
+  mov = new Movie(this, "medusa.mov");
+  //mov = new Movie(this, "medusa_hc.mov");
+  //mov = new Movie(this, "pieta.mov");
   //mov = new Movie(this, "mary.mov");
   mov.loop();
 }
@@ -36,9 +38,9 @@ void draw(){
   loadPixels();
   mov.loadPixels();
   
-  for (int y = 0; y < (300/pixel_y); y++){ //0-60 rows
-    for (int x = 0; x < (600/pixel_x); x++){ //0-100 columns
-      int this_pixel = ((600/pixel_x)*y)+x; //((# of x) * y) + x
+  for (int y = 0; y < (600/pixel_y); y++){ //0-60 rows
+    for (int x = 0; x < (1200/pixel_x); x++){ //0-100 columns
+      int this_pixel = ((1200/pixel_x)*y)+x; //((# of x) * y) + x
       color c = mov.get(x*(pixel_x), y*(pixel_y));
       pixel_color[this_pixel] = c;
       pixel_symbol[this_pixel] = int(map(brightness(c), 0, 255, 0, (symbol_no-1)));
@@ -46,9 +48,9 @@ void draw(){
   }
   
   // Convert to ascii and print letters
-  for (int y = 0; y < (300/(pixel_y)); y++){
-    for (int x = 0; x < (600/pixel_x); x++){
-      int this_pixel = ((600/pixel_x)*y)+x; //((# of x) * y) + x
+  for (int y = 0; y < (600/(pixel_y)); y++){
+    for (int x = 0; x < (1200/pixel_x); x++){
+      int this_pixel = ((1200/pixel_x)*y)+x; //((# of x) * y) + x
       color this_color = pixel_color[this_pixel];
       // Inverting colors a bit
       color inverted_color = color(blue(this_color), red(this_color), green(this_color)); 
