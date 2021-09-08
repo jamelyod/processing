@@ -1,4 +1,4 @@
-# Processing Playground
+# Processing
 
 ---------
 
@@ -27,6 +27,11 @@ https://processing.org/download
 
 Once installed, this directory can be copied into your processing environment
 and the relevant .pde files may then be open and run.
+
+You may also run the projects via the command line by navigating to their
+respective directories and running the following command:
+
+```processing-java --sketch=`pwd` --run```
 
 Instructions on using the individual projects can be found within their
 respective directories.
