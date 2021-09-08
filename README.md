@@ -35,3 +35,23 @@ respective directories and running the following command:
 
 Instructions on using the individual projects can be found within their
 respective directories.
+
+---------
+
+## Projects
+
+The projects that currently exist are as follows:
+
+- [Art Generator](art_generator/README.md)
+
+- [ASCII Generator](ascii_generator/README.md)
+
+- [Spiral Generator](spiral_generator/README.md) (WIP)
+
+---------
+
+## Example Images from Some Projects
+
+<img src="example_images/ArtGenerator_Colorful.png" alt="art generator example" height="200"/>
+<img src="example_images/ASCII_pantheon_quote.png" alt="ascii example" height="200"/>
+<img src="example_images/ASCII_Mary_BW.png" alt="ascii example 2" height="200"/>

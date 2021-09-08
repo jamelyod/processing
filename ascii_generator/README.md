@@ -2,9 +2,16 @@
 
 ---------
 
-## Ascii Generator A
+## Example Images
 
-`ascii_generator/ascii_generator_a`
+<img src="../example_images/ASCII_court.png" alt="ascii example" height="200"/>
+<img src="../example_images/ASCII_Vase.png" alt="ascii example2" height="200"/>
+<img src="../example_images/ASCII_pantheon_quote.png" alt="ascii example3" height="200"/>
+<img src="../example_images/ASCII_Mary_BW.png" alt="ascii example4" height="200"/>
+
+---------
+
+## Ascii Generator A
 
 ### Overview
 
@@ -26,8 +33,6 @@ o -
 ---------
 
 ## Ascii Generator B
-
-`ascii_generator/ascii_generator_b`
 
 ### Overview
 
@@ -53,8 +58,6 @@ p -
 
 ## Ascii Generator C
 
-`ascii_generator/ascii_generator_c`
-
 ### Overview
 
 This generator allows you to convert an video to ascii,
@@ -78,8 +81,6 @@ o -
 ---------
 
 ## Ascii Generator B
-
-`ascii_generator/ascii_generator_b`
 
 ### Overview
 

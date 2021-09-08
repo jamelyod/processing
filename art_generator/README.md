@@ -2,9 +2,15 @@
 
 ---------
 
-## Generator A
+## Example Images
 
-`generator_a/generator_a.pde`
+<img src="../example_images/ArtGenerator_Blur.png" alt="art generator example" height="200"/>
+<img src="../example_images/ArtGenerator_Colorful.png" alt="art generator example2" height="200"/>
+<img src="../example_images/ArtGenerator_Pile.png" alt="art generator example3" height="200"/>
+
+---------
+
+## Generator A
 
 ### Overview
 
@@ -25,8 +31,6 @@ w, a, s, d -
 
 ## Generator B
 
-`generator_b/generator_b.pde`
-
 ### Overview
 
 This generator is also a bit boring. It just allows you to move around 
@@ -45,8 +49,6 @@ w, a, s, d -
 ---------
 
 ## Generator C
-
-`generator_c/generator_c.pde`
 
 ### Overview
 
