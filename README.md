@@ -25,7 +25,7 @@ https://processing.org/download
 
 ## Usage
 
-Once installed, the playground directory can be copied into your processing environment
+Once installed, this directory can be copied into your processing environment
 and the relevant .pde files may then be open and run.
 
 Instructions on using the individual projects can be found within their
