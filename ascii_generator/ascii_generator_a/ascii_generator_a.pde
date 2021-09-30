@@ -8,39 +8,45 @@ String[] ascii_symbols = {
 "[", "]", "?", "-", "+", "~", "<", ">", "i", "!", "l", "I", ";", ":", ",", "\"", 
 "^", "`", "\"", "."};
 int symbol_no = ascii_symbols.length;
-int pixel_size = 6;
-int pixel_no = (600*600)/(pixel_size*pixel_size);
+int pixel_y = 12;
+int pixel_x = pixel_y/2;
+int pixel_no = (600*600)/(pixel_y*pixel_x);
 int[] pixel_symbol = new int[pixel_no];
+PFont Font1;
 
 void setup(){
   size(600, 600);
+  Font1 = createFont("Courier-Bold", 18);
+  // String[] fontList = PFont.list();
+  // printArray(fontList);
   
   // Process image
-  img = loadImage("../photos/chrome_icon.png");
+  img = loadImage("../photos/spiral_2.png");
   img.resize(600, 600);
-  for (int y = 0; y < (600/pixel_size); y++){
-    for (int x = 0; x < (600/pixel_size); x++){
-      int this_pixel = ((600/pixel_size)*y)+x;
-      color c = img.get(x*(pixel_size), y*(pixel_size));
+  for (int y = 0; y < (600/pixel_y); y++){
+    for (int x = 0; x < (600/pixel_x); x++){
+      int this_pixel = ((600/pixel_x)*y)+x;
+      color c = img.get(x*(pixel_x), y*(pixel_y));
       pixel_symbol[this_pixel] = int(map(brightness(c), 0, 255, 0, (symbol_no-1)));
     }
   }
 }
 
 void draw(){
-  background(0);
-  fill(255);
-  textSize(pixel_size);  
+  background(255);
+  fill(0);
+  textFont(Font1); 
+  textSize(pixel_y); 
   
   if (button_pressed == "none") scale(1);
   else if (button_pressed == "o") scale(2);
   else if (button_pressed == "i") scale(0.5);
   
   // Convert to ascii and print letters
-  for (int y = 0; y < (600/pixel_size); y++){
-    for (int x = 0; x < (600/pixel_size); x++){
-      int this_pixel = ((600/pixel_size)*y)+x;
-      text(ascii_symbols[pixel_symbol[this_pixel]], x*(pixel_size), y*(pixel_size));
+  for (int y = 0; y < (600/pixel_y); y++){
+    for (int x = 0; x < (600/pixel_x); x++){
+      int this_pixel = ((600/pixel_x)*y)+x;
+      text(ascii_symbols[pixel_symbol[this_pixel]], x*(pixel_x), y*(pixel_y));
     }
   }
 }
