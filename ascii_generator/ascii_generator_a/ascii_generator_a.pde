@@ -12,13 +12,14 @@ int pixel_y = 12;
 int pixel_x = pixel_y/2;
 int pixel_no = (600*600)/(pixel_y*pixel_x);
 int[] pixel_symbol = new int[pixel_no];
-PFont Font1;
+PFont font;
 
 void setup(){
   size(600, 600);
-  Font1 = createFont("Courier-Bold", 18);
-  // String[] fontList = PFont.list();
-  // printArray(fontList);
+  //font = createFont("Courier-Bold", 18);
+  font = createFont("Century.otf", 18);
+  String[] fontList = PFont.list();
+  printArray(fontList);
   
   // Process image
   img = loadImage("../photos/spiral_2.png");
@@ -35,7 +36,7 @@ void setup(){
 void draw(){
   background(255);
   fill(0);
-  textFont(Font1); 
+  textFont(font); 
   textSize(pixel_y); 
   
   if (button_pressed == "none") scale(1);
@@ -47,7 +48,9 @@ void draw(){
     for (int x = 0; x < (600/pixel_x); x++){
       int this_pixel = ((600/pixel_x)*y)+x;
       text(ascii_symbols[pixel_symbol[this_pixel]], x*(pixel_x), y*(pixel_y));
+      print(ascii_symbols[pixel_symbol[this_pixel]]);
     }
+    print("\n");
   }
 }
 
