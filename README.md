@@ -6,7 +6,7 @@
 
 Hi!
 
-I'm trying to get my bearing in Processing, and figured I'd make a repository to post things to.
+I'm trying to get my bearings in Processing, and figured I'd make a repository to post things to.
 
 If anyone is reading this, feel free to browse around!
 
@@ -46,7 +46,7 @@ The projects that currently exist are as follows:
 
 - [ASCII Generator](ascii_generator/README.md)
 
-- [Spiral Generator](spiral_generator/README.md) (WIP)
+- [Spiral Generator](spiral_generator/README.md)
 
 ---------
 
