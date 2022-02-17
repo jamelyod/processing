@@ -166,8 +166,6 @@ void move(){
 
 // Setup
 void setup(){
-  img = loadImage("../photos/pottery.png");
-  img.resize(500, 600);
   size(600, 600);
 }
 
@@ -178,7 +176,6 @@ void draw(){
   find_midpoint(top_vertex, right_vertex, right_midpoint);
   // Common variables
   background(250);
-  image(img, 50, 0);
   strokeWeight(10);
   // Draw lines
   line(top_vertex.x, top_vertex.y, left_vertex.x, left_vertex.y);
