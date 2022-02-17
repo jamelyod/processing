@@ -5,6 +5,7 @@
 ### Overview
 
 This generator really just creates some spiral-y shapes.
+I was feeling inspired after reading a lot of Junji Ito.
 
 ### Directions for Usage
 

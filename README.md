@@ -1,4 +1,4 @@
-# Processing
+# Processing Playground
 
 ---------
 
@@ -6,7 +6,7 @@
 
 Hi!
 
-I'm trying to get my bearings in Processing, and figured I'd make a repository to post things to.
+This repository exists to store my handful of experiments with Processing.
 
 If anyone is reading this, feel free to browse around!
 
@@ -44,7 +44,13 @@ The projects that currently exist are as follows:
 
 - [Art Generator](art_generator/README.md)
 
-- [ASCII Generator](ascii_generator/README.md)
+- [ASCII Image Converter](ascii_image_converter/README.md)
+
+- [ASCII Image Converter (Colorful)](ascii_image_converter_colorful/README.md)
+
+- [ASCII Video Converter](ascii_image_converter_colorful/README.md)
+
+- [Letter Mover](letter_mover/README.md)
 
 - [Spiral Generator](spiral_generator/README.md)
 
